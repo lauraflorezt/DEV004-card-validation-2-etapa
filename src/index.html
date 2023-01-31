@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
-</html>
+    <head>
+      <meta charset="utf-8"> <!--Caracteres especiales-->
+      <title>Tarjeta de crédito válida</title>
+      <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+      <header> <!--Encabezado de la página-->
+          <div class="header">
+            <img class= "principal" src="imagenes/Imagen1.png">
+            <h1>Tarjeta para tu sueño "DISNEY"</h1>
+            <h2><strong>Tarjeta de Crédito válida</strong></h2>
+          </div>
+      </header>
+    
+      <main><!--Parte mas importante del body-->
+        <div class="main">
+          <img class="tarjeta" src="imagenes/tarjeta2.jpg" height="250" width="450"><!--altura-ancho-->
+          <div class="logo"></div>
+          <div class="chip"></div>
+          <div class="nombre"><strong>Laura Flórez</strong></div>
+          <div class="nombretarjeta"><strong>DISNEY</strong></div>
+          <div class="vencimiento"> vence <br><strong>30/26</strong></div>
+            <label for="EntradadeNúmero"></label>
+            <input type="text" id="EntradadeNúmero" onkeypress=" if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;" maxlength= "16" placeholder="Insertar número de la tarjeta" size="22" class="número">
+        </div>
+      </main>
+        
+      <footer><!--sección de pie de página en un documento-->
+        <div class="footer">
+          <button id="botonvalidar">Validar Tarjeta</button>
+          <p>SI ES VALIDA ESTAS INCLUIDA EN EL VIAJE</p>
+       </div> 
+      </footer>
+          <div id ="resultado"></div>
+      <script src="index.js" type="module"></script> <!--type module se usa para indicar cuándo se está apuntando a un módulo-->
+      
+    </body>
+  </html>
+
+
+
